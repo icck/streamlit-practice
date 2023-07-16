@@ -1,0 +1,50 @@
+{
+	"name": "streamlit",
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.formatting.provider": "black",
+				"[python]": {
+					"editor.defaultFormatter": null, // Prettier を使わないようにする
+					"editor.formatOnSave": true, // ファイル保存時に自動フォーマット
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": true // import文の順番を自動ソート
+					}
+				},
+				"python.languageServer": "Pylance",
+				"python.analysis.completeFunctionParens": true,
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": false,
+				"python.linting.flake8Enabled": true,
+				"python.linting.lintOnSave": true,
+				"python.linting.flake8Args": [
+					"--max-line-length=119", //GitHubのコードレビュー画面サイズに変更
+					"--ignore=E203", //前後にスペースがあるとエラー
+					"--ignore=W503" //前に演算子があるとエラー
+				],
+				"python.formatting.blackArgs": [
+					"--line-length",
+					"119" //GitHubのコードレビュー画面サイズに変更
+				],
+				"editor.suggest.showMethods": true,
+				"editor.suggest.preview": true,
+				"editor.acceptSuggestionOnEnter": "on",
+				"editor.snippetSuggestions": "top"
+			},
+			"extensions": [
+				"oderwat.indent-rainbow",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"shardulm94.trailing-spaces",
+				"esbenp.prettier-vscode",
+				"mhutchie.git-graph",
+				"saikou9901.evilinspector",
+				"KevinRose.vsc-python-indent",
+				"Gruntfuggly.todo-tree",
+				"ms-python.black-formatter"
+			]
+		}
+	},
+	"postCreateCommand": "sh .devcontainer/postCreateCommand.sh"
+}
