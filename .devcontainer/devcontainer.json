@@ -42,7 +42,8 @@
 				"saikou9901.evilinspector",
 				"KevinRose.vsc-python-indent",
 				"Gruntfuggly.todo-tree",
-				"ms-python.black-formatter"
+				"ms-python.black-formatter",
+				"ms-python.flake8"
 			]
 		}
 	},
