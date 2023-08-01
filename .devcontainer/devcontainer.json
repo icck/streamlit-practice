@@ -43,7 +43,9 @@
 				"KevinRose.vsc-python-indent",
 				"Gruntfuggly.todo-tree",
 				"ms-python.black-formatter",
-				"ms-python.flake8"
+				"ms-python.flake8",
+				"ms-python.isort",
+				"GitHub.copilot"
 			]
 		}
 	},
